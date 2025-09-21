@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <title>צ'אט פרטי</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script defer src="/js/app.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>שיחה עם משתמש</h1>
+      <nav>
+        <ul>
+          <li><a href="#" onclick="logout()">התנתק</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <div class="container">
+      <div id="chatWindow" class="chat-box">
+        <div id="chatMessages" class="messages"></div>
+        <form onsubmit="return sendChatMessage();">
+          <input type="text" id="chatInput" placeholder="הקלד הודעה..." required />
+          <button type="submit">שלח</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© 2025 מערכת שיעורים אונליין</p></footer>
+</body>
+</html>
