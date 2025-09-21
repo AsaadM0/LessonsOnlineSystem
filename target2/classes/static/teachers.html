@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <title>דף מרצה</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script defer src="/js/app.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>מערכת למרצים</h1>
+      <nav>
+        <ul>
+          <li><a href="/teachers.html">שיעורים</a></li>
+          <li><a href="#" onclick="logout()">התנתק</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <div class="container">
+      <h2>הוספת שיעור חדש</h2>
+      <form onsubmit="return submitLessonForm();">
+        <label>שם השיעור:</label>
+        <input type="text" id="lessonTitle" required />
+        <label>תיאור:</label>
+        <input type="text" id="lessonDescription" required />
+        <label>תאריך:</label>
+        <input type="date" id="lessonDate" required />
+        <label>קישור Zoom:</label>
+        <input type="url" id="zoomLink" required />
+        <button type="submit">הוסף שיעור ושלח התראה</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container">
+      <h2>שיעורים שנוצרו</h2>
+      <div id="createdLessons">
+        <p>טעינת שיעורים...</p>
+      </div>
+    </div>
+  </section>
+
+  <footer><p>© 2025 מערכת שיעורים אונליין</p></footer>
+</body>
+</html>
